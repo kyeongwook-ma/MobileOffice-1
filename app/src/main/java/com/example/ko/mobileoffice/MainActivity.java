@@ -11,7 +11,6 @@ import com.example.ko.mobileoffice.httprest.RestClient;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
@@ -20,10 +19,12 @@ import java.io.IOException;
 public class MainActivity extends ActionBarActivity {
     GridAdapter gridAdapter;
     Button sendRequest;
+    private static MainActivity activityInstance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.activityInstance = this;
 
         GridView gridView = (GridView) findViewById(R.id.gridView);
         gridAdapter = new GridAdapter(this);
@@ -33,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
         sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*RestClient restClient = new RestClient();
+                RestClient restClient = new RestClient();
                 HttpResponse httpResponse =  restClient.execute();
                 HttpEntity responseEntity = httpResponse.getEntity();
                 try {
@@ -44,15 +45,18 @@ public class MainActivity extends ActionBarActivity {
                 {
                     e.printStackTrace();;
                 }
-*/
 
 
 
             }
         });
-
-
     }
+
+    public static MainActivity getActivityInstance()
+    {
+        return activityInstance;
+    }
+
     public GridAdapter getGridAdapter()
     {
         return gridAdapter;
