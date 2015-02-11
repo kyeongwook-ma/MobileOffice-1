@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <com.example.ko.mobileoffice.officeposition.Position
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="280dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="150dp"
     android:layout_columnSpan="1"
     android:layout_rowSpan="1"
+    android:layout_weight="1"
     android:background="@drawable/uipanel"
     android:orientation="vertical"
     >
@@ -13,7 +14,8 @@
         android:layout_height="80dp"
         android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="220dp"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
@@ -60,37 +62,37 @@
             android:layout_weight="3"
             >
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
 
                 android:id="@+id/aircondition"/>
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/light_stand"
                 />
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/humidifier"
                 />
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/lamp"
                 />
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/fan"
                 />
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/blind"/>
