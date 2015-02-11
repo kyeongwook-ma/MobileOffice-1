@@ -45,10 +45,7 @@ public class MainActivity extends ActionBarActivity {
                 {
                     e.printStackTrace();;
                 }
-
-
-
-            }
+          }
         });
     }
 
